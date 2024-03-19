@@ -3,7 +3,7 @@
 const productSection = document.getElementById('app');
 const navElement = document.getElementById('navigation')
 const basketIcon = document.getElementById('basketIcon')
-
+const loadingSection = document.getElementById('loadingscreen')
 
 
 
@@ -13,6 +13,7 @@ let myProducts = null
 
 // page load
 InitApp()
+
 
 
 
@@ -93,9 +94,25 @@ function ReadLocalStorageData() {
 
 function InitApp() {
 
+    addLoadingScreen()
     InitializeBasket()
     GetProductData()
     GetCategoryData()
+
+}
+
+ //to do... create loadingscreen call
+ function addLoadingScreen() {
+    productSection.style.display = 'none'
+    navElement.style.display = 'none'
+    loadingSection.style.display = 'block'
+
+}
+
+function removeLoadingScreen() {
+    productSection.style.display = 'block'
+    navElement.style.display = 'block'
+    loadingSection.style.display = 'none'
 
 }
 
@@ -255,10 +272,15 @@ function NavCallback(CategoryName) {
     //console.log(CategoryName);
     CloseMobileNav()
     // get data from API  bug API url og send videre
+     
+       
+    //to do loadingscreen
+ 
     if (CategoryName == "All") {
         CreateProductView(myProducts)
     }
     else {
+
         let myCategoryURL = `https://dummyjson.com/products/category/${CategoryName}`
 
         GetProductsByCategory(myCategoryURL)
@@ -301,6 +323,8 @@ function ProductCallback(myId) {
 //----------------------------------------------------------------------
 
 function LogoCallback() {
+
+    //to do insert loadingscreen
     GetProductData()
 }
 
@@ -575,6 +599,7 @@ function CreateProductView(myCards) {
     myHTML += '</section>'
 
     productSection.innerHTML = myHTML
+    removeLoadingScreen()
 }
 
 
