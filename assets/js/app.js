@@ -275,7 +275,9 @@ function NavCallback(CategoryName) {
      
        
     //to do loadingscreen
- 
+    
+    addLoadingScreen()
+
     if (CategoryName == "All") {
         CreateProductView(myProducts)
     }
@@ -575,11 +577,11 @@ function CreateNavBar(Categorydata) {
     });
 
     navHTML += '</section>'
+    
 
     navElement.innerHTML += navHTML
     resizeCheck()
 }
-
 //----------------------------------------------------------------------
 function CreateProductView(myCards) {
     //console.log(myCards);
