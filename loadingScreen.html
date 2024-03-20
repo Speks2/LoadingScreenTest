@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Screen</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #acacac;
+        color: rgb(238, 108, 15);
+    }
+
+    .loader {
+        border: 13px solid #e8e8e8;
+        border-top: 13px solid rgb(255, 106, 0);
+        width: 8rem;
+        height: 8rem;
+        border-radius: 10rem;
+        animation: spin 1000ms linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(90deg); }
+        50% { transform: rotate(180deg); }
+        75% {transform: rotate(260deg);}
+        100% {transform: rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+    <script>
+        
+    </script>
+    <div class="loader"></div>
+    <header><h1> Loading Products </h1></header>
+</body>
+</html>

@@ -13,7 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/clear.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script src="assets/js/app.js" defer></script>
+    
 </head>
 
 <body>
@@ -54,7 +56,15 @@
 
     </nav>
 
-    <section id="app"> </section>
+    <section id="app"> 
+      
+    </section>
+    <!-- ___________ LoadingScreen-->
+    <section id="loadingscreen">
+       <dotlottie-player src="/assets/json/Animation - 1710922479269(2).json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+     <h1>Loading...</h1>
+    </section>
+<!-- ___________ LoadingScreenEND-->
     <footer>
         <section>
             <h3>Adresse</h3>
